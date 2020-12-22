@@ -199,11 +199,11 @@ export default {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 10vh;
+    height: 15vh;
     min-height: 100px; 
 
-    background-color: #283747;
-    color: #E5E7E9;
+    background-color: #93BF47;
+    color: #000000;
 
   }
 
@@ -214,6 +214,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Roboto-Regular", Helvetica, Arial, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
   }
 
 </style>
