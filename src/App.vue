@@ -208,6 +208,7 @@ export default {
     position:absolute;
     background-color: #93BF47;
     color: #000000;
+    display: flex;
 
   }
 
