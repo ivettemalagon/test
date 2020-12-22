@@ -3,12 +3,12 @@
 
     <div class="header">
 
-      
+      <h1>Banco UN</h1>
       <nav>
-        <button v-on:click="init" v-if="is_auth" > INICIO </button>
-        <button v-on:click="getBalance" v-if="is_auth" > BUSCAR PRODUCTO </button>
-        <button v-on:click="doTransaction" v-if="is_auth" > MODIFICAR PRODUCTO </button>
-        <button v-on:click="logOut" v-if="is_auth" >SALIR</button>
+        <button v-on:click="init" v-if="is_auth" > Inicio </button>
+        <button v-on:click="getBalance" v-if="is_auth" > Saldo </button>
+        <button v-on:click="doTransaction" v-if="is_auth" > Transacción </button>
+        <button v-on:click="logOut" v-if="is_auth" >Cerrar Sesión</button>
       </nav>
     </div>
     
@@ -22,8 +22,7 @@
   
 
     <div class="footer">
-      <h2>     <br/>Ivette Malagon<br/>G1M2<br/></h2>
-      
+      <h2>Misión TIC 2022</h2>
     </div>
 
 
@@ -126,6 +125,7 @@ export default {
 
 
 <style>
+
   body{
     margin: 0 0 0 0;
   }
@@ -207,18 +207,6 @@ export default {
     align-items: center;
   }
 
-  }
-
-  .footer h2{
-    width: 100%;
-    height: 100%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
 </style>
-
 
 
