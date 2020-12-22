@@ -149,9 +149,12 @@ export default {
     align-items: center;
   }
 
-  .header h1{
-    width: 20%;
-    text-align: center;
+  .logo {
+    left:30px;
+    background-color: transparent;
+    height: 75px;
+    width: 276px;
+    position:relative;
   }
 
   .header nav {
