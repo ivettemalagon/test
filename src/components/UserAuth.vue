@@ -41,7 +41,7 @@ export default {
     methods: {
         processAuthUser: function(){
             var self = this
-            axios.post("https://infinapp-app.herokuapp.com/", self.user_in,  {headers: {}})
+            axios.post("https://infinapp-api.herokuapp.com/", self.user_in,  {headers: {}})
                 .then((result) => {
                     alert("Autenticación Exitosa");
                     self.$emit('log-in', self.user_in.username)
