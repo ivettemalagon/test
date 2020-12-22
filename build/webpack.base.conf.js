@@ -30,6 +30,14 @@ module.exports = {
     }
   },
   module: {
+    loaders: [
+            {
+                test: /\.css$/,
+                include: [
+                    path.resolve(__dirname, "not_exist_path")
+                ],
+                loader: "style!css"
+            },
     rules: [
       {
         test: /\.vue$/,
