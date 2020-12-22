@@ -215,8 +215,7 @@ export default {
     width: 100%;
     height: 100%;
     left:calc(39.16% - 30px);
-    display: flex;
-    
+    position:absolute;
     justify-content: center;
     align-items: center;
     font-family: "Roboto-Regular", Helvetica, Arial, serif;
@@ -225,7 +224,7 @@ export default {
     font-weight: 700;
   }
   .mintic{
-    
+    position:absolute;
     bottom:15px;
     left:calc(39.16% - 50px);
     right:0;
