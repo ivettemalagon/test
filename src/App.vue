@@ -141,8 +141,8 @@ export default {
     height: 10vh; 
     min-height: 100px;
 
-    background-color: #283747 ;
-    color:#E5E7E9  ;
+    background-color: #93BF47 ;
+    color:#414141  ;
 
     display: flex;
     justify-content: space-between;
