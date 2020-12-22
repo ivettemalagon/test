@@ -58,7 +58,7 @@ export default {
                 pvp: this.pvp,
                 fecha_vencimiento: this.fecha_vencimiento
             }
-            axios.put("http://127.0.0.1:8000/inventory/product/modify/", modificar_producto)
+            axios.put("https://infinapp-api.herokuapp.com/inventory/product/modify/", modificar_producto)
                 .then((result) => {
                      alert("Producto modificado exitosamente");
             })
