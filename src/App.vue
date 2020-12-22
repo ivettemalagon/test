@@ -180,9 +180,9 @@ export default {
   }
 
   .header nav button:hover{
-    color: #283747;
-    background: #E5E7E9;
-    border: 1px solid #E5E7E9;
+    color: #414141;
+    background: #E6B06B;
+    border: 1px solid #E6B06B;
   }
 
   
@@ -191,7 +191,7 @@ export default {
     margin: 0%;
     padding: 0%;
 
-    background: #FDFEFE ;
+    background: #414141 ;
   }
 
  
