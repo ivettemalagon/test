@@ -25,7 +25,11 @@
   
 
     <div class="footer">
-      <h2>Misión TIC 2022</h2>
+      <h2>     <br/>Ivette Malagon<br/>G1M2<br/></h2>
+      <img 
+        class="mintic"
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/32f16345-b125-4b8e-8f3d-065d7c4aeab2/deat8kp-fb0aa021-718c-4eb2-9e56-864ece5ab5ce.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMzJmMTYzNDUtYjEyNS00YjhlLThmM2QtMDY1ZDdjNGFlYWIyXC9kZWF0OGtwLWZiMGFhMDIxLTcxOGMtNGViMi05ZTU2LTg2NGVjZTVhYjVjZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.62CkIKNcdlbto5GY9z31IpU4EoEdrmmdafWOPbrbLEY" />
+    
     </div>
 
 
@@ -201,7 +205,7 @@ export default {
     width: 100%;
     height: 15vh;
     min-height: 100px; 
-
+    position:absolute;
     background-color: #93BF47;
     color: #000000;
 
