@@ -4,7 +4,7 @@
             <h2>Modificar Producto</h2>
             <form v-on:submit.prevent="processModify" >
                 <select name="Nombre del producto">
-                    <option selected value="0"> Nombre del producto </option>
+                    <option selected value="0"> Productos Disponibles </option>
                     <option value="Pan_Bimbo">Pan_Bimbo</option>
                     <option value="Jabon_Ariel">Jabon_Ariel</option>
                     <option value="Margarina_Gustosita">Margarina_Gustosita</option>
