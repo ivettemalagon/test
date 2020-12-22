@@ -3,12 +3,12 @@
 
     <div class="header">
 
-      <h1>Banco UN</h1>
+      <h1>InfinAPP</h1>
       <nav>
-        <button v-on:click="init" v-if="is_auth" > Inicio </button>
-        <button v-on:click="getBalance" v-if="is_auth" > Saldo </button>
-        <button v-on:click="doTransaction" v-if="is_auth" > Transacción </button>
-        <button v-on:click="logOut" v-if="is_auth" >Cerrar Sesión</button>
+        <button v-on:click="init" v-if="is_auth" > INICIO </button>
+        <button v-on:click="getBalance" v-if="is_auth" > BUSCAR PRODUCTO </button>
+        <button v-on:click="doTransaction" v-if="is_auth" > MODIFICAR PRODUCTO </button>
+        <button v-on:click="logOut" v-if="is_auth" >SALIR</button>
       </nav>
     </div>
     
@@ -128,6 +128,7 @@ export default {
 
   body{
     margin: 0 0 0 0;
+    background-color:#414141;
   }
 
   .header{
