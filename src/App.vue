@@ -212,6 +212,7 @@ export default {
     height: 100%;
     left:calc(50.6% - 30px);
     display: flex;
+    position:absolute;
     justify-content: center;
     align-items: center;
     font-family: "Roboto-Regular", Helvetica, Arial, serif;
