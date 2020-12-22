@@ -1,51 +1,68 @@
 <template>
-    <div id="UserBalance" class="user_balance">
-        <h2>{{username}}</h2>
-        <h2>Tu saldo es: <span>  {{balance}} COP </span> </h2>
+    <div id="Inventory">
+        <div class="container_inventory">
+            <h2>¿Que desea hacer?<br/></h2>
+            <button v-on:click="getSearch"> BUSCAR PRODUCTO </button>
+            <button v-on:click="getModify"> MODIFICAR PRODUCTO </button>
+       
+        </div>
     </div>
 </template>
 
 <script>
-import axios from 'axios';
-export default {
-    name: 'UserBalance',
-    data: function (){
-        return {
-            username: "none",
-            balance: 0
+    export default {
+        name: "Inventory",
+        data:function(){
+            return {            }
+        },
+        methods: {
+        getSearch: function(){
+              this.$router.push({name: "buscar"})
+      
+        },
+        getModify: function(){
+              this.$router.push({name: "modificar"})
+      
         }
-    },
-
-    created: function(){
-        this.username = this.$route.params.username
-
-        let self = this
-        axios.get("http://127.0.0.1:8000/user/balance/" + this.username).then((result) => {
-            self.balance = result.data.balance
-        })
+        },
+        created: function(){
+        }
     }
-}
 </script>
 
-
 <style>
-    #UserBalance{
+    #Inventory{
         width: 100%;
         height: 100%;
-
         display: flex;
-        flex-direction: column;
-        justify-content: center;    
+        justify-content: space-around;
         align-items: center;
     }
-
-    #UserBalance h2{
+    #Inventory h2{
         font-size: 50px;
-        color: #283747;
+        color: #ffffff;
+        text-align: center;
+        font-family: "Roboto-Bold", Helvetica, Arial, serif;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
     }
+    #Inventory button{
+        width: 100%;
+        height: 40px;
 
-    #UserBalance span{
-        color: crimson;
-        font-weight: bold;
+        color: #242424;
+        background: #E6B06B;
+        border: 1px solid #E6B06B;
+
+        border-radius: 5px;
+        padding: 10px 25px;
+        margin: 5px 0;
+        font-weight: 700;
+    }
+    #Inventory button:hover{
+        color: #414141;
+        background: #93BF47;
+        border: 1px solid #93BF47;
     }
 </style>
