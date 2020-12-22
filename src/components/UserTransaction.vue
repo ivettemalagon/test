@@ -1,75 +1,94 @@
 <template>
-    <div id="UserTransaction">
-        <div class="continer_user_transaction">
-            <h2> Transacción {{username}}</h2>
-
-            <form v-on:submit.prevent="processTransaction" >
-                <input type="tetx" v-model="value" placeholder="Valor">
-                <br>
-                <button type="submit">Hacer Transacción</button>
+    <div id="Modify" class="modify_product">       
+        <div class="container_modify_product">
+            <h2>Modificar Producto</h2>
+            <form v-on:submit.prevent="processModify" >
+                <select name="Nombre del producto">
+                    <option selected value="0"> Nombre del producto </option>
+                    <option value="Pan_Bimbo">Pan_Bimbo</option>
+                    <option value="Jabon_Ariel">Jabon_Ariel</option>
+                    <option value="Margarina_Gustosita">Margarina_Gustosita</option>
+                    <option value="Jugo_DelValle">Jugo_DelValle</option>
+                    <option value="Huevo">Huevo</option>
+                    <option value="Agua_Botella">Agua_Botella</option>
+                    <option value="Arroz_Libra">Arroz_Libra</option>
+                </select>
+                <input type="text" v-model="cantidad" placeholder="Cantidad"><br>
+                <input type="text" v-model="precio_compra" placeholder="Precio de compra"><br>
+                <input type="text" v-model="pvp" placeholder="Precio al publico"><br>
+                <input type="text" v-model="fecha_vencimiento" placeholder="Fecha de vencimiento">
+                <button type="submit">Modificar</button>
             </form>
-
+        </div>
+        <div class="container_data">
+            <h2>INFORMACIÓN DEL PRODUCTO</h2>
+            <h3>Nombre: {{nombre_producto}}<br/>
+                Cantidad: {{cantidad}} <br/>
+                Precio de compra: {{precio_compra}} <br/>
+                Precio al publico: {{pvp}} <br/>
+                Fecha de vencimiento: {{fecha_vencimiento}}
+            </h3>
         </div>
     </div>
 </template>
 
-
 <script>
-
 import axios from 'axios';
+
 export default {
-    name: "UserTransaction",
+    name: "UserAuth",
+
     data: function(){
-        return{
-            username: "none",
-            value: ""
+        return {
+            nombre_producto: "",
+            cantidad: "",
+            precio_compra: "",
+            pvp: "",
+            fecha_vencimiento: ""
         }
     },
 
-    methods:{
-        processTransaction: function(){
+    methods: {
+        processModify(){
             var self = this
-            let transaction_in = {
-                username: this.username,
-                value: this.value
+            let modificar_producto = {
+                nombre_producto: this.nombre_producto,
+                cantidad: this.cantidad,
+                precio_compra: this.precio_compra,
+                pvp: this.pvp,
+                fecha_vencimiento: this.fecha_vencimiento
             }
-            axios.put("http://127.0.0.1:8000/user/transaction/", transaction_in,  {headers: {}})
+            axios.put("http://127.0.0.1:8000/inventory/product/modify/", modificar_producto)
                 .then((result) => {
-                    alert("Transaction Correcta, Saldo Restante: " + result.data.actual_balance);
-                    
-                })
-                .catch((error) => {
-                      alert("ERROR Transaction Incorrecta: Saldo Insuficiente");
-                });
+                     alert("Producto modificado exitosamente");
+            })
+            .catch((error) => {
+                    alert("ERROR 404: Producto no encontrado.");
+            });
         }
     },
-
-    created: function(){
-        this.username = this.$route.params.username
-    }
-
+        
 }
 </script>
 
-
 <style>
-    #UserTransaction{
+
+    .modify_product{
         margin: 0;
         padding: 0%;
         height: 100%;
         width: 100%;
     
         display: flex;
-        justify-content: center;
+        left:calc(20.6% - 30px);
+        position:relative;
+        justify-content: left;
         align-items: center;
 
     }
 
-    .continer_user_transaction {
-        border: 3px solid  #283747;
-        border-radius: 10px;
-
-        width: 25%;
+    .container_modify_product {
+        width: 30%;
         height: 60%;
         
         display: flex;
@@ -78,46 +97,94 @@ export default {
         align-items: center;
     }
 
-    #UserTransaction h2{
-        color: #283747;
-
+    .modify_product h2{
+        color: #E5E7E9;
+        font-family: "Roboto-Bold", Helvetica, Arial, serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
     }
 
-    #UserTransaction form{
-        width: 50%;
+    .modify_product form{
+        width: 80%;
         
     }
 
-    #UserTransaction input{
+    .modify_product input{
         height: 40px;
         width: 100%;
-
+        
         box-sizing: border-box;
         padding: 10px 20px;
         margin: 5px 0;
 
-        border: 1px solid #283747;
+        border: 1px solid #E5E7E9;
         
     }
+    .modify_product select{
+        height: 40px;
+        width: 100%;
+        
+        box-sizing: border-box;
+        padding: 10px 20px;
+        margin: 5px 0;
 
-    
-
-    #UserTransaction button{
+        border: 1px solid #E5E7E9;
+        
+    }
+    .modify_product button{
         width: 100%;
         height: 40px;
 
-        color: #E5E7E9;
-        background: #283747;
-        border: 1px solid #E5E7E9;
+        color: #283747;
+        background: #E6B06B;
+        border: 1px solid #E6B06B;
 
         border-radius: 5px;
         padding: 10px 25px;
         margin: 5px 0;
+
     }
 
-    #UserTransaction button:hover{
-        color: #E5E7E9;
-        background: crimson;
-        border: 1px solid #283747;
+    .modify_product button:hover{
+        color: #414141;
+        background: #93BF47;
+        border: 1px solid #93BF47;
     }
+
+    .container_data{
+        margin: 0;
+        padding: 0%;
+        height: 50%;
+        width: 30%;
+    
+        display: flex;
+        left:calc(20.6% - 30px);
+        position:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background: #686868;
+        border: 1px solid #686868;
+        border-radius: 10px;
+    }
+    
+    .container_data h2{
+        color: #E5E7E9;
+        font-family: "Roboto-Bold", Helvetica, Arial, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        justify-content: center;
+    }
+    .container_data h3{
+        color: #E5E7E9;
+        font-family: "Roboto-Bold", Helvetica, Arial, serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        justify-content: left;
+    }
+
 </style>
