@@ -3,7 +3,10 @@
 
     <div class="header">
 
-      <h1>InfinAPP</h1>
+      <img
+      class="logo"
+      src="https://anima-uploads.s3.amazonaws.com/projects/5fdc158d8688b1df3f41bd9a/releases/5fdc15ff302a7106407a24bf/img/logo@1x.png"
+    />
       <nav>
         <button v-on:click="init" v-if="is_auth" > INICIO </button>
         <button v-on:click="getBalance" v-if="is_auth" > BUSCAR PRODUCTO </button>
