@@ -164,17 +164,19 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    font-size: 20px;
   }
 
   .header nav button{
-    color: #E5E7E9;
-    background: #283747;
-    border: 1px solid #E5E7E9;
+    color: #000000;
+    background: #93BF47;
+    border: 1px solid #93BF47;
 
     border-radius: 5px;
     padding: 10px 20px;
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
   }
 
   .header nav button:hover{
