@@ -214,7 +214,7 @@ export default {
   .footer h2{
     width: 100%;
     height: 100%;
-    left:calc(60.84% - 30px);
+    left:calc(60.84% - 40px);
     position:absolute;
     justify-content: center;
     align-items: center;
@@ -226,7 +226,7 @@ export default {
   .mintic{
     position:absolute;
     bottom:15px;
-    left:calc(39.16% - 50px);
+    left:calc(39.16% - 40px);
     right:0;
     width:153px;
     height:70px;
