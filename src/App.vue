@@ -205,7 +205,7 @@ export default {
     width: 100%;
     height: 15vh;
     min-height: 100px; 
-    position:absolute;
+    
     background-color: #93BF47;
     color: #000000;
 
