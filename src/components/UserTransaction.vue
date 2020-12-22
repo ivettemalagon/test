@@ -3,7 +3,7 @@
         <div class="container_modify_product">
             <h2>Modificar Producto</h2>
             <form v-on:submit.prevent="processModify" >
-                <select name="Nombre del producto">
+                <select name="Nombre del producto"  placeholder="nombre_producto">
                     <option selected value="0"> Nombre del producto </option>
                     <option value="Pan_Bimbo">Pan_Bimbo</option>
                     <option value="Jabon_Ariel">Jabon_Ariel</option>
