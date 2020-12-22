@@ -224,6 +224,14 @@ export default {
     font-style: normal;
     font-weight: 700;
   }
+  .mintic{
+    position:absolute;
+    bottom:15px;
+    left:calc(39.16% - 50px);
+    right:0;
+    width:153px;
+    height:70px;
+  }
 
 </style>
 
