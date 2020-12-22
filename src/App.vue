@@ -128,73 +128,73 @@ export default {
 <style>
   body{
     margin: 0 0 0 0;
+    background-color:#414141;
   }
-
   .header{
     margin: 0%;
     padding: 0;
     width: 100%;
-    height: 10vh; 
+    height: 10vh;
     min-height: 100px;
-
-    background-color: #283747 ;
-    color:#E5E7E9  ;
-
+    background-color: #93BF47 ;
+    color:#414141 ;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
-  .header h1{
-    width: 20%;
-    text-align: center;
-  }
-
+  
   .header nav {
     height: 100%;
-    width: 40%;
-
+    width: 45%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    font-size: 20px;
+    
   }
-
   .header nav button{
-    color: #E5E7E9;
-    background: #283747;
-    border: 1px solid #E5E7E9;
-
+    color: #000000;
+    background: #93BF47;
+    border: 1px solid #93BF47;
     border-radius: 5px;
     padding: 10px 20px;
+    font-family: "Roboto-Bold", Helvetica, Arial, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
   }
-
   .header nav button:hover{
-    color: #283747;
-    background: #E5E7E9;
-    border: 1px solid #E5E7E9;
+    color: #414141;
+    background: #E6B06B;
+    border: 1px solid #E6B06B;
   }
-
-  
   .main-component{
     height: 75vh;
     margin: 0%;
     padding: 0%;
-
-    background: #FDFEFE ;
+    background: #414141 ;
   }
-
- 
   .footer{
+    position:absolute;
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 10vh;
-    min-height: 100px; 
-
-    background-color: #283747;
-    color: #E5E7E9;
+    height: 15vh;
+    min-height: 100px;
+    background-color: #93BF47;
+    color: #000000;
+  }
+  .footer h2{
+    width: 100%;
+    height: 100%;
+    left:calc(50.6% - 30px);
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto-Regular", Helvetica, Arial, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+  }
 
   }
 
