@@ -3,7 +3,7 @@
     <div id="AuthUser" class="auth_user">
         
         <div class="container_auth_user">
-            <h2>Autenticarse</h2>
+            <h2>INICIAR SESIÓN</h2>
 
             <form v-on:submit.prevent="processAuthUser" >
                 <input type="text" v-model="user_in.username" placeholder="Username">
@@ -79,9 +79,7 @@ export default {
     }
 
     .container_auth_user {
-        border: 3px solid  #283747;
-        border-radius: 10px;
-        width: 25%;
+        width: 40%;
         height: 60%;
         
         display: flex;
@@ -91,7 +89,13 @@ export default {
     }
 
     .auth_user h2{
-        color: #283747;
+        font-size: 50px;
+        color: #ffffff;
+        text-align: center;
+        font-family: "Roboto-Bold", Helvetica, Arial, serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
 
     }
 
@@ -118,9 +122,9 @@ export default {
         width: 100%;
         height: 40px;
 
-        color: #E5E7E9;
-        background: #283747;
-        border: 1px solid #E5E7E9;
+        color: #283747;
+        background: #E6B06B;
+        border: 1px solid #E6B06B;
 
         border-radius: 5px;
         padding: 10px 25px;
@@ -128,9 +132,9 @@ export default {
     }
 
     .auth_user button:hover{
-        color: #E5E7E9;
-        background: crimson;
-        border: 1px solid #283747;
+        color: #414141;
+        background: #93BF47;
+        border: 1px solid #93BF47;
     }
 
 </style>
