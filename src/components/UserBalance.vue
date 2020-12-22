@@ -40,7 +40,7 @@ export default {
             let busca_nombre = {
                 nombre_producto: this.nombre_producto
             }
-            axios.get("http://127.0.0.1:8000/inventory/product/" + this.nombre_producto).then((result) => {
+            axios.get("https://infinapp-api.herokuapp.com/inventory/product/" + this.nombre_producto).then((result) => {
                 self.nombre_producto = result.data.nombre_producto,
                 self.cantidad = result.data.cantidad,
                 self.precio_compra = result.data.precio_compra,
