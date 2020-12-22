@@ -214,7 +214,7 @@ export default {
   .footer h2{
     width: 100%;
     height: 100%;
-    left:calc(39.16% - 30px);
+    left:calc(60.84% - 30px);
     position:absolute;
     justify-content: center;
     align-items: center;
