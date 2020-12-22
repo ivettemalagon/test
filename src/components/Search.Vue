@@ -1,23 +1,12 @@
 <template>
-    <div id="Modify" class="modify_product">       
-        <div class="container_modify_product">
-            <h2>Modificar Producto</h2>
-            <form v-on:submit.prevent="processModify" >
-                <select name="Nombre del producto">
-                    <option selected value="0"> Nombre del producto </option>
-                    <option value="Pan_Bimbo">Pan_Bimbo</option>
-                    <option value="Jabon_Ariel">Jabon_Ariel</option>
-                    <option value="Margarina_Gustosita">Margarina_Gustosita</option>
-                    <option value="Jugo_DelValle">Jugo_DelValle</option>
-                    <option value="Huevo">Huevo</option>
-                    <option value="Agua_Botella">Agua_Botella</option>
-                    <option value="Arroz_Libra">Arroz_Libra</option>
-                </select>
-                <input type="text" v-model="cantidad" placeholder="Cantidad"><br>
-                <input type="text" v-model="precio_compra" placeholder="Precio de compra"><br>
-                <input type="text" v-model="pvp" placeholder="Precio al publico"><br>
-                <input type="text" v-model="fecha_vencimiento" placeholder="Fecha de vencimiento">
-                <button type="submit">Modificar</button>
+    <div id="Search" class="search_product">
+        <div class="container_search_product">
+            <h2> Buscar Producto</h2>
+
+            <form v-on:submit.prevent="processBuscar" >
+                <input type="tetx" v-model="nombre_producto" placeholder="Nombre del producto">
+                <br>
+                <button type="submit">Buscar</button>
             </form>
         </div>
         <div class="container_data">
@@ -33,47 +22,45 @@
 </template>
 
 <script>
+
 import axios from 'axios';
-
 export default {
-    name: "UserAuth",
-
+    name: "Search",
     data: function(){
-        return {
+        return{
             nombre_producto: "",
-            cantidad: "",
-            precio_compra: "",
-            pvp: "",
-            fecha_vencimiento: ""
+            cantidad: 0,
+            precio_compra: 0,
+            pvp: 0,
+            fecha_vencimiento: "",
         }
     },
 
-    methods: {
-        processModify(){
+    methods:{
+        processBuscar: function(){
             var self = this
-            let modificar_producto = {
-                nombre_producto: this.nombre_producto,
-                cantidad: this.cantidad,
-                precio_compra: this.precio_compra,
-                pvp: this.pvp,
-                fecha_vencimiento: this.fecha_vencimiento
+            let busca_nombre = {
+                nombre_producto: this.nombre_producto
             }
-            axios.put("http://127.0.0.1:8000/inventory/product/modify/", modificar_producto)
-                .then((result) => {
-                     alert("Producto modificado exitosamente");
+            axios.get("http://127.0.0.1:8000/inventory/product/" + this.nombre_producto).then((result) => {
+                self.nombre_producto = result.data.nombre_producto,
+                self.cantidad = result.data.cantidad,
+                self.precio_compra = result.data.precio_compra,
+                self.pvp = result.data.pvp,
+                self.fecha_vencimiento = result.data.fecha_vencimiento
             })
-            .catch((error) => {
-                    alert("ERROR 404: Producto no encontrado.");
-            });
+             .catch((error) => {
+                    if (error.response.status == "404")
+                        alert("ERROR 404: Producto no encontrado.");
+                });
         }
     },
-        
 }
 </script>
 
 <style>
 
-    .modify_product{
+    .search_product{
         margin: 0;
         padding: 0%;
         height: 100%;
@@ -87,7 +74,7 @@ export default {
 
     }
 
-    .container_modify_product {
+    .container_search_product {
         width: 30%;
         height: 60%;
         
@@ -97,7 +84,7 @@ export default {
         align-items: center;
     }
 
-    .modify_product h2{
+    .search_product h2{
         color: #E5E7E9;
         font-family: "Roboto-Bold", Helvetica, Arial, serif;
         font-size: 30px;
@@ -105,12 +92,12 @@ export default {
         font-weight: 700;
     }
 
-    .modify_product form{
+    .search_product form{
         width: 80%;
         
     }
 
-    .modify_product input{
+    .search_product input{
         height: 40px;
         width: 100%;
         
@@ -121,18 +108,8 @@ export default {
         border: 1px solid #E5E7E9;
         
     }
-    .modify_product select{
-        height: 40px;
-        width: 100%;
-        
-        box-sizing: border-box;
-        padding: 10px 20px;
-        margin: 5px 0;
 
-        border: 1px solid #E5E7E9;
-        
-    }
-    .modify_product button{
+    .search_product button{
         width: 100%;
         height: 40px;
 
@@ -146,7 +123,7 @@ export default {
 
     }
 
-    .modify_product button:hover{
+    .search_product button:hover{
         color: #414141;
         background: #93BF47;
         border: 1px solid #93BF47;
@@ -188,3 +165,4 @@ export default {
     }
 
 </style>
+
