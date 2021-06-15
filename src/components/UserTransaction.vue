@@ -13,7 +13,7 @@
                     <option value="Agua Botella">Agua Botella</option>
                     <option value="Arroz Libra">Arroz Libra</option>
                 </select>
-                <input type="text" v-model="nombre_producto" placeholder="nombre_producto"><br>
+                <input type="text" v-model="nombre_producto" placeholder="Nombre del Producto"><br>
                 <input type="text" v-model="cantidad" placeholder="Cantidad"><br>
                 <input type="text" v-model="precio_compra" placeholder="Precio de compra"><br>
                 <input type="text" v-model="pvp" placeholder="Precio al publico"><br>
