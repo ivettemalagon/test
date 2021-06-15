@@ -209,7 +209,7 @@ export default {
     font-weight: 700;
   }
   .mintic{
-    
+    position:center;
     bottom:15px;
     left:calc(39.16% - 50px);
     right:0;
