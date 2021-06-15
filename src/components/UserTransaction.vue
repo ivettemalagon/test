@@ -2,8 +2,8 @@
     <div id="Modify" class="modify_product">       
         <div class="container_modify_product">
             <h2>Modificar Producto</h2>
-            <form v-on:submit.prevent="processModify" >
-                <select name="nombre_producto">
+            <form v-on:submit.prevent="processModify" v-model="nombre_producto>
+                <select name="Producto">
                     <option selected value="0"> Productos Disponibles </option>
                     <option value="Pan_Bimbo">Pan Bimbo</option>
                     <option value="Jabon_Ariel">Jabon Ariel</option>
