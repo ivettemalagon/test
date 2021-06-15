@@ -7,7 +7,7 @@
                     <option selected value="0"> Productos Disponibles </option>
                     <option value="Pan">Pan</option>
                     <option value="Jabon">Jabon</option>
-                    <option value="Margarina">Margarina Gustosita</option>
+                    <option value="Margarina">Margarina</option>
                     <option value="Jugo">Jugo</option>
                     <option value="Huevo">Huevo</option>
                     <option value="Agua">Agua</option>
