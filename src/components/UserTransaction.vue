@@ -2,7 +2,7 @@
     <div id="Modify" class="modify_product">       
         <div class="container_modify_product">
             <h2>Modificar Producto</h2>
-            <form v-on:submit.prevent="processModify" v-model="nombre_producto>
+            <form v-on:submit.prevent="processModify" v-model="nombre_producto">
                 <select name="Producto">
                     <option selected value="0"> Productos Disponibles </option>
                     <option value="Pan_Bimbo">Pan Bimbo</option>
@@ -10,8 +10,8 @@
                     <option value="Margarina_Gustosita">Margarina Gustosita</option>
                     <option value="Jugo_DelValle">Jugo DelValle</option>
                     <option value="Huevo">Huevo</option>
-                    <option value="Agua Botella">Agua_Botella</option>
-                    <option value="Arroz Libra">Arroz_Libra</option>
+                    <option value="Agua_Botella">Agua Botella</option>
+                    <option value="Arroz_Libra">Arroz Libra</option>
                 </select>
                 <input type="text" v-model="cantidad" placeholder="Cantidad"><br>
                 <input type="text" v-model="precio_compra" placeholder="Precio de compra"><br>
