@@ -9,8 +9,8 @@
     />
       <nav>
         <button v-on:click="init" v-if="is_auth" > INICIO </button>
-        <button v-on:click="getBalance" v-if="is_auth" > BUSCAR PRODUCTO </button>
-        <button v-on:click="doTransaction" v-if="is_auth" > MODIFICAR PRODUCTO </button>
+        <button v-on:click="getBalance" v-if="is_auth" > BUSCAR </button>
+        <button v-on:click="doTransaction" v-if="is_auth" > MODIFICAR </button>
         <button v-on:click="logOut" v-if="is_auth" >SALIR</button>
       </nav>
     </div>
@@ -147,7 +147,7 @@ export default {
   }
   .header nav {
     height: 100%;
-    width: 30%;
+    width: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
