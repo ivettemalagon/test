@@ -28,8 +28,8 @@
       <h2>     <br/>Ivette Malagon<br/>G1M2<br/></h2>
       <img 
         class="mintic"
-        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/32f16345-b125-4b8e-8f3d-065d7c4aeab2/deat8kp-fb0aa021-718c-4eb2-9e56-864ece5ab5ce.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMzJmMTYzNDUtYjEyNS00YjhlLThmM2QtMDY1ZDdjNGFlYWIyXC9kZWF0OGtwLWZiMGFhMDIxLTcxOGMtNGViMi05ZTU2LTg2NGVjZTVhYjVjZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.62CkIKNcdlbto5GY9z31IpU4EoEdrmmdafWOPbrbLEY" />
-    
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/32f16345-b125-4b8e-8f3d-065d7c4aeab2/deat8kp-fb0aa021-718c-4eb2-9e56-864ece5ab5ce.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMzJmMTYzNDUtYjEyNS00YjhlLThmM2QtMDY1ZDdjNGFlYWIyXC9kZWF0OGtwLWZiMGFhMDIxLTcxOGMtNGViMi05ZTU2LTg2NGVjZTVhYjVjZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.62CkIKNcdlbto5GY9z31IpU4EoEdrmmdafWOPbrbLEY" 
+        align="center"/>
     </div>
 
 
@@ -137,22 +137,18 @@ export default {
     margin: 0 0 0 0;
     background-color:#414141;
   }
-
   .header{
     margin: 0%;
     padding: 0;
     width: 100%;
-    height: 10vh; 
+    height: 10vh;
     min-height: 100px;
-
     background-color: #93BF47 ;
-    color:#414141  ;
-
+    color:#414141 ;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   .logo {
     left:30px;
     background-color: transparent;
@@ -160,21 +156,18 @@ export default {
     width: 276px;
     position:relative;
   }
-
   .header nav {
     height: 100%;
-    width: 40%;
-
+    width: 45%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
   }
-
   .header nav button{
     color: #000000;
     background: #93BF47;
     border: 1px solid #93BF47;
-
     border-radius: 5px;
     padding: 10px 20px;
     font-family: "Roboto-Bold", Helvetica, Arial, serif;
@@ -182,41 +175,32 @@ export default {
     font-style: normal;
     font-weight: 700;
   }
-
   .header nav button:hover{
     color: #414141;
     background: #E6B06B;
     border: 1px solid #E6B06B;
   }
-
-  
   .main-component{
     height: 75vh;
     margin: 0%;
     padding: 0%;
-
     background: #414141 ;
   }
-
- 
   .footer{
+    position:absolute;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 15vh;
-    min-height: 100px; 
-    position:absolute;
+    min-height: 100px;
     background-color: #93BF47;
     color: #000000;
-    display: flex;
-
   }
-
   .footer h2{
     width: 100%;
     height: 100%;
-    left:calc(60.84% - 40px);
-    position:absolute;
+    left:calc(50.6% - 30px);
+    position:fixed;
     justify-content: center;
     align-items: center;
     font-family: "Roboto-Regular", Helvetica, Arial, serif;
@@ -225,14 +209,13 @@ export default {
     font-weight: 700;
   }
   .mintic{
-    position:absolute;
+    
     bottom:15px;
-    left:calc(39.16% - 40px);
+    left:calc(39.16% - 50px);
     right:0;
     width:153px;
     height:70px;
   }
-
 </style>
 
 
