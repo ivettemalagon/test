@@ -5,13 +5,13 @@
             <form v-on:submit.prevent="processModify" >
                 <select name="Nombre del producto">
                     <option selected value="0"> Productos Disponibles </option>
-                    <option value="Pan_Bimbo">Pan_Bimbo</option>
-                    <option value="Jabon_Ariel">Jabon_Ariel</option>
-                    <option value="Margarina_Gustosita">Margarina_Gustosita</option>
-                    <option value="Jugo_DelValle">Jugo_DelValle</option>
+                    <option value="Pan Bimbo">Pan Bimbo</option>
+                    <option value="Jabon Ariel">Jabon Ariel</option>
+                    <option value="Margarina Gustosita">Margarina Gustosita</option>
+                    <option value="Jugo DelValle">Jugo DelValle</option>
                     <option value="Huevo">Huevo</option>
-                    <option value="Agua_Botella">Agua_Botella</option>
-                    <option value="Arroz_Libra">Arroz_Libra</option>
+                    <option value="Agua Botella">Agua Botella</option>
+                    <option value="Arroz Libra">Arroz Libra</option>
                 </select>
                 <input type="text" v-model="nombre_producto" placeholder="nombre_producto"><br>
                 <input type="text" v-model="cantidad" placeholder="Cantidad"><br>
